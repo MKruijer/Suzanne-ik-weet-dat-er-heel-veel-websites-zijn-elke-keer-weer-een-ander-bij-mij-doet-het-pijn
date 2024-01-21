@@ -6,6 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suzanne Collins Books</title>
+    <style>
+        body {
+            background-image: url("pictures/BackgroundImage.jpeg");
+        }
+    </style>
 </head>
 
 <body>
@@ -21,17 +26,18 @@
         </div>
     </div>
 
-    <article>
-        <img src="pictures\suzanne-collins-hunger-games.webp">
-        Hi! Thanks for visiting my website.
-        <br> <br> My name is Suzanne Collins, i am most know for the books I have written.
-        I want you to question about how elements of the book might be relevant in their own lives.
-        And, if they’re disturbing, what they might do about them.
-    </article>
+    <div class="welcome">
+        <br />
+        <div class="welcome-text">
+            Hi! Thanks for visiting my website.
+            <br />
+            My name is Suzanne Collins, i am most know for the books I have written.
+            I want you to question about how elements of the book might be relevant in their own lives.
+            And, if they’re disturbing, what they might do about them.
+        </div>
+    </div>
 
-    slideIndex
-
-    <div class="columcontainer">
+    <!-- <div class="columcontainer">
         <div class="column">
             <div class="slideshow-container">
                 <div class="columimagecontainer">
@@ -116,34 +122,53 @@
                 Year of the Jungle (2013)
             </p>
         </div>
+    </div>-->
+
+    
+    <div class="column-container">
+        <!--hunger games-->
+        <div class="series-column">
+            <div class="series-image">
+                <img src="pictures/Hg--jacket.jpg">
+            </div>
+            <div class="series-text">
+                <h3>The hunger games</h3>
+                <p>
+                    is a series of young adult dystopian novels written by American author Suzanne Collins. The first three novels are part of a trilogy following teenage protagonist Katniss Everdeen, and the fourth book is a prequel set 64 years before the original.
+                </p>
+            </div>
+        </div>
+        <!--Underlang Chronicles-->
+        <div class="series-column">
+            <div class="series-image">
+                <img src="pictures\gregor the overlander1.jpg">
+            </div>
+            <div class="series-text">
+                <h3>The underland Chronicles</h3>
+                <p>
+                    is a series of five epic fantasy novels by Suzanne Collins, first published between 2003 and 2007. It tells the story of a boy named Gregor and his adventures in the "Underland", a subterranean world located under New York City.
+                </p>
+            </div>
+        </div>
+        <!--Other works-->
+        <div class="series-column">
+            <div class="series-image">
+                <img src="pictures\YOTJ_Cover.jpg" class="column-image">
+            </div>
+            <div class="series-text">
+                <h3>Other works</h3>
+                <p>
+                    Collins began her career in 1991 as a writer for children's television shows.[8] She worked on several shows for Nickelodeon. Besides the books she wrote for she wrote 2 other books calles
+                    When Charlie McButton Lost Power (2005)
+                    Year of the Jungle (2013)
+                </p>
+            </div>
+        </div>
     </div>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
 
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
 
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            slideIndex++;
-
-            if (slideIndex > slides.length) { slideIndex = 1 }
-
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-
-            setTimeout(showSlides, 4000); // Change image every 2 seconds
-        }
+    <script src="Javascript.js">
     </script>
 </body>
 </html>
