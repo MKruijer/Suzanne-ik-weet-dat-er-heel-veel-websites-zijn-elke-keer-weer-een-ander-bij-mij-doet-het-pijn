@@ -1,21 +1,23 @@
-let slideIndex = 0;
-showSlides();
+const hungerGamesElements = document.getElementsByClassName("hungerGamesBookCover"); 
+const underlandChroniclesElements = document.getElementsByClassName("underlandChroniclesBookCover");
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
+let hungerGamesIndex = hungerGamesElements.length - 1;
+let underlandChroniclesIndex = underlandChroniclesElements.length - 1;
 
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
+function changeBookCover() {
+    hungerGamesElements[hungerGamesIndex].style.display = "none";
+    underlandChroniclesElements[underlandChroniclesIndex].style.display = "none";
+    hungerGamesIndex++;
+    if (hungerGamesIndex > hungerGamesElements.length - 1) {
+        hungerGamesIndex = 0;
+    }
+    underlandChroniclesIndex++;
+    if (underlandChroniclesIndex > underlandChroniclesElements.length - 1) {
+        underlandChroniclesIndex = 0;
+    }
+    hungerGamesElements[hungerGamesIndex].style.display = "block";
+    underlandChroniclesElements[underlandChroniclesIndex].style.display = "block";
+    setTimeout(changeBookCover, 4000); // Change image every 2 seconds
 }
+
+changeBookCover();

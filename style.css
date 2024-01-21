@@ -30,7 +30,7 @@ body {
   text-decoration: none;
   font-size: 2.5vh;
   line-height: 30px;
-  border-radius: 10px;
+  border-radius: 1.5vh;
 }
 
 /* Aparte header logo styling */
@@ -66,18 +66,18 @@ body {
     right: 0;
     margin: 10px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 1.5vh;
 }
 
 .welcome-text {
     float: left;
     max-width: 33%;
-    margin-left: 5%;
-    margin-top: 5%;
+    margin-left: 2%;
+    margin-top: 2%;
     padding: 1vh;
     color: white;
     background-color: rgba(205, 205, 205, 0.5);
-    border-radius: 10px;
+    border-radius: 1.5vh;
 }
 
 /*#region series */
@@ -87,10 +87,10 @@ body {
     left: 0;
     right: 0;
     position: relative;
-    margin: 10px;
-    padding: 10px;
+    margin: 1vh;
+    padding: 1vh;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 1.5vh;
 }
 
 .series-column {
@@ -99,20 +99,23 @@ body {
 }
 
 .series-image {
-    width: 50%;
+    width: 45%;
     float: left;
+    padding: 1vh;
 }
 
     .series-image img {
         width: 100%;
-        height: 100%;
     }
 
 .series-text {
-    width: 50%;
-    float: right;
-    margin: auto;
+    margin-left: 10px;
 }
+
+    .series-text a {
+        text-decoration: none;
+        color: inherit;
+    }
 /*#endregion */
 /*#endregion */
 
@@ -126,7 +129,7 @@ body {
     overflow: hidden;
     left: 0;
     right: 0;
-    border-radius: 10px;
+    border-radius: 1.5vh;
 }
 
 .book-image {
@@ -155,7 +158,7 @@ body {
     overflow: hidden;
     left: 0;
     right: 0;
-    border-radius: 10px;
+    border-radius: 1.5vh;
 }
 
 .otherwork-image {
@@ -176,62 +179,12 @@ body {
 
 /*#region oude-meuk */
 
-.columcontainer {
-    background-color: rgba(255, 255, 255, 0.559);
-    bottom: 0;
-    position: relative;
-    margin: 10px;
-    padding: 10px;
-}
-
-.columleft {
-  display: table-cell;
-  max-width: 33%;
-}
-
-.colummiddle {
-  display: table-cell;
-  max-width: 33%;
-}
-
-.columright{
-  display: table-cell;
-  max-width: 33%;
-}
-
-.columimagecontainer {
-  float: left;
-  width: 1vw;
-  max-width: 33%;
-  max-height: 33%;
-}
-
- .columtextcontainer{
-  font-size: 1.5vw;
-  padding: 5px;
-  margin: 5px;
-}
-
 .hoerenblock{
     height: 100%;
   background-color: darkgray;
   width: 28.5%;
   position: fixed;
   z-index: -10;
-}
-
-.rowsuckmydick{
-margin: 20px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.725);
-  height: 25%;
-  max-height: 25%;
-  width: 100%;
-}
-    
-article .img{
-    width: 100%;
-    height: 33%;
 }
 
 /* The dots/bullets/indicators */
@@ -270,15 +223,37 @@ article .img{
   to {opacity: 1}
 }
 
-.column {
-  float: left;
-  width: 33.33%;
+.invisible-link-left {
+    position: absolute;
+    top: 24%;
+    left: 69.5%;
+    width: 2.5%;
+    height: 3%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-.imagecontainer {
-  float: left;
-  width: 20vw;
-  margin: 10px;
+.invisible-link-right {
+    position: absolute;
+    top: 24%;
+    left: 76.1%;
+    width: 2.5%;
+    height: 3%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
+
+    .invisible-link-left::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
 /*#endregion */
